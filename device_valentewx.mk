@@ -35,9 +35,6 @@ PRODUCT_COPY_FILES += \
     device/htc/valentewx/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
     device/htc/valentewx/recovery/sbin/detect_key:recovery/root/sbin/detect_key
 
-# GPS config
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
-
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/valentewx/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
@@ -85,10 +82,6 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    gps.valentewx \
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.valentewx
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
@@ -120,3 +113,10 @@ $(call inherit-product-if-exists, vendor/htc/valentewx/valentewx-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# Discard inherited values and use our own instead.
+PRODUCT_DEVICE := valentewx
+PRODUCT_NAME := valentewx
+PRODUCT_BRAND := htc
+PRODUCT_MODEL := J
+PRODUCT_MANUFACTURER := HTC
