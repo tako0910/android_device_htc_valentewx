@@ -85,6 +85,7 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
 # Recovery
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
 TARGET_RECOVERY_FSTAB := device/htc/valentewx/rootdir/etc/fstab.qcom
 
 #BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
